@@ -120,7 +120,7 @@
           <li><i class="bi bi-check-circle"></i> 我們的平台以網站形式存在，隨時隨地都能登錄，方便使用者隨時進行團購活動，這與其他平台相比具有明顯的便利性和靈活性。</li>
         </ul>
         <p>
-          一個網站式平台供中央大學的學生們使用：使用者能夠發起活動或者參加其他人發起的活動，發起人能自行決定將前往的商家，並選擇期望團購的物品，到達一定人數的參加人數網站便會計算費用。且軟體會顯示團購優惠並對比原價，讓發起人與參加者取得雙贏的局面。由於實施對象是以學生為目標，因此網站並非以商業利益為導向。
+          一個網站式平台供中央大學的學生們使用：使用者能夠發起活動或者參加其他人發起的活動，發起人能自行決定將前往的商家，並選擇期望團購的物品，到達一定人數的參加人數網站便會計算費用。由於實施對象是以學生為目標，因此網站並非以商業利益為導向。
         </p>
       </div>
     </div>
@@ -170,128 +170,183 @@
       </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Menu Section ======= -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Demo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
     <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>團購清單</h2>
-          <p>快看看你缺什麼!</p>
+            <div class="section-title">
+                <h2>團購清單</h2>
+                <p>快看看你缺什麼!</p>
+            </div>
+
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="menu-flters">
+                        <li data-filter="*" class="filter-active">總覽</li>
+                        <li data-filter=".filter-starters">生鮮食材</li>
+                        <li data-filter=".filter-salads">日用品</li>
+                        <li data-filter=".filter-specialty">團購趣</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-6 menu-item filter-starters">
+                    <img src="圖片區\20150108085857943.jpg" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#onionInfo" aria-expanded="false" aria-controls="onionInfo">洋蔥</button>
+                        <span>NT$10/顆</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        全聯 一袋5顆 3/20收單
+                    </div>
+                    <div class="accordion-collapse collapse" id="onionInfo" data-bs-parent="#menu">
+                        <div class="accordion-body" style="position: static;">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="inputNameOnion" class="form-label">姓名</label>
+                                    <input type="text" class="form-control" id="inputNameOnion" placeholder="請輸入姓名">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputPhoneOnion" class="form-label">連絡電話</label>
+                                    <input type="tel" class="form-control" id="inputPhoneOnion" placeholder="請輸入電話號碼">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputQuantityOnion" class="form-label">訂購數量</label>
+                                    <input type="number" class="form-control" id="inputQuantityOnion" placeholder="請輸入訂購數量">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputNoteOnion" class="form-label">備註</label>
+                                    <textarea class="form-control" id="inputNoteOnion" rows="3" placeholder="備註"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">確認加入</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-item filter-specialty">
+                  <img src="圖片區\wastons_logo_500x455.jpg" class="menu-img" alt="">
+                  <div class="menu-content">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#watsonsInfo" aria-expanded="false" aria-controls="watsonsInfo">屈臣氏</button>
+                      <span>滿千送百</span>
+                  </div>
+                  <div class="menu-ingredients">
+                      網購滿五百免運費 3/29收單
+                  </div>
+                  <div class="accordion-collapse collapse" id="watsonsInfo" data-bs-parent="#menu">
+                      <div class="accordion-body" style="position: static;">
+                          <form>
+                              <div class="mb-3">
+                                  <label for="inputNameWatsons" class="form-label">姓名</label>
+                                  <input type="text" class="form-control" id="inputNameWatsons" placeholder="請輸入姓名">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="inputPhoneWatsons" class="form-label">連絡電話</label>
+                                  <input type="tel" class="form-control" id="inputPhoneWatsons" placeholder="請輸入電話號碼">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="inputQuantityWatsons" class="form-label">訂購數量</label>
+                                  <input type="number" class="form-control" id="inputQuantityWatsons" placeholder="請輸入訂購數量">
+                              </div>
+                              <div class="mb-3">
+                                  <label for="inputNoteWatsons" class="form-label">備註</label>
+                                  <textarea class="form-control" id="inputNoteWatsons" rows="3" placeholder="備註"></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-primary">確認加入</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 menu-item filter-starters">
+                <img src="圖片區\original.png" class="menu-img" alt="">
+                <div class="menu-content">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flourInfo" aria-expanded="false" aria-controls="flourInfo">麵粉</button>
+                    <span>NT$50/1000克</span>
+                </div>
+                <div class="menu-ingredients">
+                    鋅酩烘焙坊 2000克150元 4/1收單
+                </div>
+                <div class="accordion-collapse collapse" id="flourInfo" data-bs-parent="#menu">
+                    <div class="accordion-body" style="position: static;">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputNameFlour" class="form-label">姓名</label>
+                                <input type="text" class="form-control" id="inputNameFlour" placeholder="請輸入姓名">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPhoneFlour" class="form-label">連絡電話</label>
+                                <input type="tel" class="form-control" id="inputPhoneFlour" placeholder="請輸入電話號碼">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputQuantityFlour" class="form-label">訂購數量</label>
+                                <input type="number" class="form-control" id="inputQuantityFlour" placeholder="請輸入訂購數量">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputNoteFlour" class="form-label">備註</label>
+                                <textarea class="form-control" id="inputNoteFlour" rows="3" placeholder="備註"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">確認加入</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+             <div class="col-lg-6 menu-item filter-salads">
+              <img src="圖片區\84692406304798.avif" class="menu-img" alt="">
+              <div class="menu-content">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#warmPacksInfo" aria-expanded="false" aria-controls="warmPacksInfo">暖暖包</button>
+                  <span>NT$13/個</span>
+              </div>
+              <div class="menu-ingredients">
+                  小陳製藥大白兔竹炭暖暖包-握式100入 1290元 4/13收單
+              </div>
+              <div class="accordion-collapse collapse" id="warmPacksInfo" data-bs-parent="#menu">
+                  <div class="accordion-body" style="position: static;">
+                      <form>
+                          <div class="mb-3">
+                              <label for="inputNameWarmPacks" class="form-label">姓名</label>
+                              <input type="text" class="form-control" id="inputNameWarmPacks" placeholder="請輸入姓名">
+                          </div>
+                          <div class="mb-3">
+                              <label for="inputPhoneWarmPacks" class="form-label">連絡電話</label>
+                              <input type="tel" class="form-control" id="inputPhoneWarmPacks" placeholder="請輸入電話號碼">
+                          </div>
+                          <div class="mb-3">
+                              <label for="inputQuantityWarmPacks" class="form-label">訂購數量</label>
+                              <input type="number" class="form-control" id="inputQuantityWarmPacks" placeholder="請輸入訂購數量">
+                          </div>
+                          <div class="mb-3">
+                              <label for="inputNoteWarmPacks" class="form-label">備註</label>
+                              <textarea class="form-control" id="inputNoteWarmPacks" rows="3" placeholder="備註"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-primary">確認加入</button>
+                      </form>
+                  </div>
+              </div>
+             </div>
+            </div>
         </div>
+    </section>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
-              <li data-filter="*" class="filter-active">總覽</li>
-              <li data-filter=".filter-starters">生鮮食材</li>
-              <li data-filter=".filter-salads">日用品</li>
-              <li data-filter=".filter-specialty">團購趣</li>
-            </ul>
-          </div>
-        </div>
+</body>
 
-        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+</html>
 
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="圖片區\20150108085857943.jpg" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">洋蔥</a><span>NT$10/顆</span>
-            </div>
-            <div class="menu-ingredients">
-              全聯 一袋5顆 3/20收單</div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="圖片區\wastons_logo_500x455.jpg" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">屈臣氏</a><span>滿千送百</span>
-            </div>
-            <div class="menu-ingredients">
-              網購滿五百免運費 3/29收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="圖片區\original.png" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">麵粉</a><span>NT$50/1000克</span>
-            </div>
-            <div class="menu-ingredients">
-              鋅酩烘焙坊 2000克150元 4/1收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <img src="圖片區\84692406304798.avif"class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">暖暖包</a><span>NT$13/個</span>
-            </div>
-            <div class="menu-ingredients">
-              小陳製藥大白兔竹炭暖暖包-握式100入 1290元 4/13收單</div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="圖片區\S2YMCRSO.png" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">【MIX】皇家藥草浴美肌皂 </a><span>NT$25/顆</span>
-            </div>
-            <div class="menu-ingredients">
-              (印度當地內銷版)檀香/草本/寶貝/岩蘭草葡萄籽 買八送三 3/30收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-starters">
-            <img src="圖片區\cabbage.jpg_1140x855.jpg" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">高麗菜</a><span>NT$45元/台斤</span>
-            </div>
-            <div class="menu-ingredients">
-              親果市場 45元/台斤 3/26 12:00收單 </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <img src="圖片區\17434556039198.avif"class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">衛生紙</a><span>NT$15/包</span>
-            </div>
-            <div class="menu-ingredients">
-              摳死扣苛刻蘭衛生紙 120抽 X 72入 1145元 4/8收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-salads">
-            <img src="圖片區\63999621955614.avif" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">衛生棉</a><span>NT$50/包</span>
-            </div>
-            <div class="menu-ingredients">
-              pchemo靠不住衛生棉 4/5~4/11滿899折150(免運) 4/11 21:00收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="圖片區\unnamed.gif" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">SWANSON 保健食品</a><span>NT$200/瓶</span>
-            </div>
-            <div class="menu-ingredients">
-              4/10~4/30滿兩千送五百 4/27收單
-            </div>
-          </div>
-
-          <div class="col-lg-6 menu-item filter-specialty">
-            <img src="圖片區\S__8069131.jpg" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#">memo 熊寶貝舒壓抱枕（大）</a><span>NT$899/個</span>
-            </div>
-            <div class="menu-ingredients">
-              超虧賊 好熊寶一生推 4/28收單
-        </div>
-
-      </div>
-    </section><!-- End Menu Section -->
-
-    <!-- ======= Specials Section ======= -->
     <section id="specials" class="specials">
       <div class="container" data-aos="fade-up">
 
@@ -537,7 +592,7 @@
                   身為一名研究生，我的時間非常寶貴，但購物卻成了我生活中的一大煩惱。校園商場的選擇有限，而外出購物又需花費不少時間。最近，我找到了一個解決方法！一個網站平台讓我能夠與其他同學一起團購，不僅能夠省去時間，還能享受到更優惠的價格。這讓我感到非常開心，終於可以在忙碌的研究生活中，輕鬆解決購物的難題！
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src="圖片區\_700a1762-d6d5-4a61-8de2-0b7cc0e325a9.jpg" class="testimonial-img" alt="">
                 <h3>林志明</h3>
                 <h4>中央大學資管系研究生</h4>
               </div>
@@ -550,7 +605,7 @@
                   作為一名學生會成員，我時刻關心著如何提升同學們的生活品質。購物困擾一直是我們學生的煩惱之一，但現在，我們有了一個新的解決方案！透過這個網站平台，我們可以輕鬆發起團購活動，讓同學們享受到更優惠的價格，同時也能促進同學之間的交流與互助。這個購物新模式不僅為我們的校園生活注入了新的活力，也讓我們更加團結！
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src="圖片區\_ea00d847-dcd7-4903-9e1a-a7bb9b640daf.jpg" class="testimonial-img" alt="">
                 <h3>劉小雲</h3>
                 <h4>大四、學生會部長</h4>
               </div>
@@ -563,7 +618,7 @@
                   對於喜歡攝影的我來說，購買相關器材一直是我的必然需求。然而，校園商場提供的選擇有限，外出購物又耗時費力。但現在，有了這個新的網站平台，我可以輕鬆自由地選擇商家和商品，並與其他同學一起團購，享受到更優惠的價格。這個購物新體驗不僅讓我省去了前往市區購物的麻煩，還讓我能夠與志同道合的攝影愛好者交流分享，真是太棒了！
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src="圖片區\_2c29883a-81c2-4798-8c4b-dcab7dce679f.jpg" class="testimonial-img" alt="">
                 <h3>張小菁</h3>
                 <h4>一名喜歡攝影的大學生</h4>
               </div>
@@ -576,7 +631,7 @@
                   Navigating local shopping as an international student on campus is challenging. While the campus mall offers essentials, it's limited, and grocery trips are time-consuming and costly. Food delivery services like foodpanda and Uber Eats add extra fees, making discounts scarce. Recently, I found a solution: a new website for group buying. It lets students initiate or join group purchases, select vendors and products, and enjoy bulk discounts.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src="圖片區\_d8d9bf88-804a-4d46-96d9-e73a95395aa4.jpg" class="testimonial-img" alt="">
                 <h3>Maria Brandon</h3>
                 <h4>international student</h4>
               </div>
@@ -588,7 +643,7 @@
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   作為一名對美食充滿熱情的學生，我經常需要新鮮食材來烹飪。然而，校園商場提供的選擇有限，外出購物又費時費力。但現在，有了這個新的網站平台，我不僅可以輕鬆選擇自己喜歡的商家和商品，還能夠與其他同學一起團購，享受到更優惠的價格。這個購物新體驗讓我感到非常興奮，終於可以在校園內輕鬆解決美食方面的需求！                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src="圖片區\_72b54704-4d9f-469f-937b-9af844591831.jpg" class="testimonial-img" alt="">
                 <h3>王曉明</h3>
                 <h4>對於美食有著極高的要求</h4>
               </div>
